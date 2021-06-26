@@ -1,0 +1,38 @@
+.Header {
+  height: 50px;
+  border-bottom: 2px solid peachpuff;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 5px 0px peachpuff;
+}
+.Nav {
+  height: 100%;
+}
+
+.List {
+  display: flex;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.List .NavLink {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 2px 5px;
+  margin: 0 0 0 7px;
+  color: rgb(247, 216, 216);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.List .NavLink:hover,
+.List .NavLink:focus {
+  transform: scale(1.1);
+}
+
+.List .active {
+  color: rgb(250, 68, 68);
+  text-decoration: underline;
+}

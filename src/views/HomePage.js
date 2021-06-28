@@ -15,12 +15,12 @@ class HomePage extends Component {
 
   async componentDidMount() {
     try {
-      this.setState({ movies: [], page: 1, error: "", loader: true });
+      this.setState({ loader: true });
       const { page } = this.state;
       const movies = await api.getTrendingMovies(page);
       this.addTrendingMoviesToState(movies, page);
     } catch (err) {
-      this.setState({ error: err });
+      this.setState({ error: err, loader: false });
     }
   }
 
